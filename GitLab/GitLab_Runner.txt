@@ -1,0 +1,33 @@
+
+GitLab:
+
+Run these cmd in the local: "git bash"
+
+git config --global user.name "ashishprasadmohapatra"
+git config --global user.name
+git config --global user.email "ashish.mohapatra77@gmail.com"
+git config --global user.email
+git config --global --list
+
+go to folder location on Desktop/labstation/
+cd Desktop/labstation/
+git init
+git status
+git add .
+git commit -m "messages"
+git push -u "url" master ----------------or------- (git push -u origin master)
+
+
+
+
+GitLab runner:
+curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64"
+chmod +x /usr/local/bin/gitlab-runner
+useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+gitlab-runner start
+gitlab-runner --version
+gitlab-runner list
+gitlab-runner stop
+service gitlab-runner start
+service gitlab-runner stop

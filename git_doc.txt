@@ -1,0 +1,25 @@
+###Install git in the local machine (always install in root)
+apt-get install git -y
+git --version
+which git
+git config --global user.name "ashish"
+git config --global user.email "amohapatra@precisiondev.org"    #---------may or maynot be a valid email required
+git config --list
+
+
+###Now for transfering the data or the files to the central repository, we need to go to the local machine
+###In the local machine create a new directory for git (work space + staging area + local repo)
+mkdir xyz
+cd xyz
+git init                     ---------------------------------(git initilize create .git folder inside the directory means it will become local repo)
+touch file1 (insert some data)
+git status
+git add . (or specific file)
+git status
+git commit -m "message to define the commit"
+git status
+git log
+git show <commit-id>
+git remote add origin <central repo address>
+git push -u origin master
+###(enter username and password of central repository i.e. github or gitlab)

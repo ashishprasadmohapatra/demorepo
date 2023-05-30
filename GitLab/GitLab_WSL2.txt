@@ -1,0 +1,36 @@
+ cd /mnt/c/Users/Ashish/Desktop/labstation/MyRepo/
+ ls-l
+ ls -l
+ git status
+ git config --global user.name "ashishmohapatra"
+ git config --global user.name
+ git status
+ git config --global --list
+ git config --global user.email "ashish.mohapatra77@gmail.com"
+ git status
+ git init
+ git status
+ git config --global --list
+ cd
+ pwd
+ ls -l
+ mkdir MyRepoDupli
+ touch MyRepoDupli/gitpractice.txt
+ cd MyRepoDupli/
+ ls
+ nano gitpractice.txt
+ git init
+ ls -al
+ git status
+ git add gitpractice.txt
+ git commit -u "from ubuntu to gitlab"
+ git commit -m "from ubuntu to gitlab"
+ git push -u "https://gitlab.com/ashishmohapatra/my-repo-dupli.git" master
+ git push -u "https://gitlab.com/ashishmohapatra/my-repo-dupli.git" main
+ ls
+ echo "I am enough" > myfile.txt
+ ls
+ git add myfile.txt
+ git commit -m "using ssh key"
+ git push -u "git@gitlab.com:ashishmohapatra/my-repo-dupli.git" master
+ cd
