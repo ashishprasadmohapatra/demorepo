@@ -3,7 +3,7 @@ apt-get install git -y
 git --version
 which git
 git config --global user.name "ashish"
-git config --global user.email "amohapatra@precisiondev.org"    #---------may or maynot be a valid email required
+git config --global user.email "amohapatra@precisiondev.org" ---------(may or maynot be a valid email required)
 git config --list
 
 
@@ -14,12 +14,28 @@ cd xyz
 git init                     ---------------------------------(git initilize create .git folder inside the directory means it will become local repo)
 touch file1 (insert some data)
 git status
+git status file1             ---------------------------------( Also can check the status for a particular file or folder)
 git add . (or specific file)
 git status
 git commit -m "message to define the commit"
 git status
 git log
 git show <commit-id>
-git remote add origin <central repo address>
+git remote add origin <central repo address>   ---------------(eg:- https://gitlab.com/ashishmohapatra/new-test-repo.git or ssh option
+###for ssh option we need to add the local machine ssh key (MY_WSL2_ssh_key) to GitLab or Github account go to "Account settings->>Preferences->>
+###SSH Keys->>Add new ssh key")
+
 git push -u origin master
-###(enter username and password of central repository i.e. github or gitlab)
+###(enter the username and the password of central repository i.e. github or gitlab for https or it will not ask any credentials if ssh key is already added to
+###the Central Repository)
+
+###If you want to add those files to different Central Repository, then first remove the earlier one and add the new one;
+git remote remove origin
+git remote add origin <other central repository address>
+git push -u origin master
+
+###To check which Central repository is connected;
+git remote -v 
+git remote show origin
+
+
